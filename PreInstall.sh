@@ -1,25 +1,14 @@
 #!/bin/bash
 
-# chmod +x ~/myawesomedots/PreInstall.sh
+LANG=C apt update
 
-#echo "Initial apt update"
-#LANG=C apt update
-
-#echo "Apt Dist Upgrade"
-#LANG=C apt dist-upgrade -y
-#echo "Dist Upgrade complete. Autoremoving old stuff"
-#LANG=C apt autoremove -y
+echo "Apt Dist Upgrade"
+LANG=C apt dist-upgrade -y
+echo "Dist Upgrade complete. Autoremoving old stuff"
+LANG=C apt autoremove -y
 
 # Backup original sources.list file
-#cp /etc/apt/sources.list /etc/apt/sources.list.bak
-
-# Replace "main" with "testing" in sources.list file
-# sed -i 's/main/testing/g' /etc/apt/sources.list
-
-# Update package cache
-#sudo apt update
-#apt dist-upgrade -y
-#apt autoremove -y
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 PKGS=(
 
@@ -67,18 +56,7 @@ PKGS=(
 'nitrogen'
 'lxappearance'
 'lxrandr'
-'xfce4-panel'
-'xfce4-power-manager'
 'libnotify-bin'
-'xfce4-notifyd'
-'xfce4-goodies'
-'xfce4-power-manager-plugins'
-'xfce4-screenshooter'
-'xfce4-sntray-plugin'
-'xfce4-taskmanager'
-'xfce4-whiskermenu-plugin'
-'xfce4-indicator-plugin'
-'xfce4-session'
 'mousepad'
 'ristretto'
 'synaptic'
