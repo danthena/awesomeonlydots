@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# chmod +x ~/myawesomedots/PostInstall.sh
-
 ## Getting dracula gtk theme
 cd ~
 wget https://github.com/dracula/gtk/archive/master.zip
@@ -41,9 +39,8 @@ rm -rf mousepad
 #git clone https://github.com/danthena/myawesomedots
 
 # Symlink dots
-awesomedots=$HOME/myawesomedots
+awesomedots=$HOME/awesomeonlydots
 
-ln -s $awesomedots/xfce4   ~/.config
 ln -s $awesomedots/autostart   ~/.config
 ln -s $awesomedots/awesome    ~/.config
 ln -s $awesomedots/picom      ~/.config
