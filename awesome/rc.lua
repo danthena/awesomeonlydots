@@ -57,6 +57,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "dractheme.lua")
 terminal = "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
+net_dev = "enp0s3"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -212,7 +213,7 @@ netwidgetup:set_color({
         { 1, "#6272a4" }
     }
 })
-vicious.register(netwidgetup, vicious.widgets.net, "${enp3s0 up_kb}", 1)
+vicious.register(netwidgetup, vicious.widgets.net, "${".. net_dev .." up_kb}", 1)
 
 
 -- Network DOWN graph widget
@@ -229,7 +230,7 @@ netwidgetdown:set_color({
         { 1, "#6272a4" }
     }
 })
-vicious.register(netwidgetdown, vicious.widgets.net, "${enp3s0 down_kb}", 1)
+vicious.register(netwidgetdown, vicious.widgets.net, "${".. net_dev .." down_kb}", 1)
 
 
 
